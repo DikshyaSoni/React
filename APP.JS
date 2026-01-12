@@ -1,42 +1,47 @@
-{/* <div id="parent">
-    <div id="child1">
-     <h1>heyyyyyy</h1>
-     <h2>heyyyyy hi <h2>
-     </div>
-    <div id="child2">
-     <h1>heyyyyyy</h1>
-     <h2>heyyyyy hi <h2>
-     </div>
-    </div>
-  */}
-//  EPISODE1
-
 import React from "react";
-import ReactDOM from "react-dom/client";
- const parent = React.createElement("div",{id:"parent"}, 
+import ReactDom from "react-dom/client";
 
-     [React.createElement("div",{id: "child1", key: "child1" },
+// react.create element  => object =>HTMLElement(render)
 
-        [ React.createElement("h1",{},"heyyyyy"),
-            React.createElement("h2",{},"heyyyyyaaaaaa hi"),
-        ]),
-        React.createElement("div",{id: "child2", key: "child2" },
-
-        [ React.createElement("h1",{},"heyyyyyjjjjjjjjjjkkkkk"),
-            React.createElement("h2",{},"heyyyyy vdgdgfhi"),
-        ]),
-
-    ]);
-            const root = ReactDOM.createRoot(document.getElementById("root"));
-     root.render(parent)
-     
-
-    //  THIS REACT CODE WILL REPLACE THE HELLO WORLD FROM INDEX.HTML
-//  such a complex code so there exists #JSX
  
- 
- 
- 
-//  const heading = React.createElement("h1",{},"Newww");
-    //  const root = ReactDOM.createRoot(document.getElementById("root"));
-    //  root.render(heading);
+
+// jsx- HTML like or Xml-like syntx
+// jsx- is tranpiled before it reaches the js engine -parcel-BABEl
+// jsx- babel transpile it to react.createelement=> reactelement(jsobject ) => htmlelement(render)
+
+
+
+
+//ReactElement
+const jsxheading = <h1 id="heading" className="head">Namaste react with jsx</h1>;
+
+
+
+// React Functional Components
+
+const HeadingComponents =  ()=> {
+  return <h1>Namaste R </h1>
+};
+
+const HeadComponents = () => <h1>Namaste react </h1>
+
+
+
+const Components = () => (
+    <div>
+        {HeadingComponents()}
+    < HeadComponents />
+    
+<h1 className="heading">Namaste react using functional Components</h1>
+</div>
+);
+
+
+
+const root = ReactDom.createRoot(document.getElementById("root"));
+
+
+
+// root.render(jsxheading);
+// root.render(<HeadComponents />);
+root.render(<Components />);

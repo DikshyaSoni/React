@@ -25,3 +25,16 @@ npx = executing the package
  - error handling
  -https
  -treeshaking -- remove unused code
+ - different 
+
+ #Episode 3
+
+ attributes to jsx => use camel case
+ use brackets = when you  write jsx in multiple lines
+ //ReactComponents  ----
+                //  |__ ClassBased Components = old
+                // |__ Functional Components = new
+
+{} = you can write any js code inside this curly  braces
+
+<title></title> === <title /> === title();
